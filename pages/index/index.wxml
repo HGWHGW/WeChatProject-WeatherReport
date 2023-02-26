@@ -1,0 +1,35 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- 地区选择器 -->
+  <picker mode="region" class="region" bindchange="changeRegion">
+    <view class="region-text">{{region}}</view>
+  </picker>
+  <!-- 文本编辑器 -->
+  <text class="message">{{now.temp}}℃ {{now.text}}</text>
+  <!-- 图片 -->
+  <image src="/images/{{now.icon}}.jpg"></image>
+  <!-- 多行天气信息 -->
+  <view class="detail">
+    <view class="bar">
+      <view class="box">湿度</view>
+      <view class="box">气压</view>
+      <view class="box">能见度</view>
+    </view>
+    <view class="bar">
+      <view class="box">{{now.humidity}}%</view>
+      <view class="box">{{now.pressure}}hPa</view>
+      <view class="box">{{now.vis}}Km</view>
+    </view>
+    <view class="bar">
+      <view class="box">风向</view>
+      <view class="box">风速</view>
+      <view class="box">风力</view>
+    </view>
+    <view class="bar">
+      <view class="box">{{now.windDir}}</view>
+      <view class="box">{{now.windSpeed}} Km/h</view>
+      <view class="box">{{now.windScale}} 级</view>
+    </view>
+    <view class="bar">更新时间: {{now.obsTime}}</view>
+  </view>
+</view>
